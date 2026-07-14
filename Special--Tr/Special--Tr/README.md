@@ -25,7 +25,7 @@ All settings live in **Admin → Extensions → SK Host → SK Host Designer →
 Run on your panel VPS as root:
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/tg623672-eng/special-/main/Special--Tr/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/tg623672-eng/special-/main/Special--Tr/Special--Tr/install.sh | bash
 ```
 
 The installer downloads this repository, packages and installs the SK Host extension via
