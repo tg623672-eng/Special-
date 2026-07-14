@@ -29,16 +29,16 @@
 
             if($hint == 1) {
               $hint_icon = "bi-stars";
-              $hint_text = "<b>Enjoying SKA Host so far?</b> Customize every part of your panel's appearance from this designer.";
+              $hint_text = "<b>Enjoying SK Host so far?</b> Customize every part of your panel's appearance from this designer.";
             } else if($hint == 2) {
               $hint_icon = "bi-puzzle-fill";
-              $hint_text = "SKA Host works with most of your <b>favorite extensions</b>. Expand your panel's functionality by stocking up on some new extensions <a href='https://blueprint.zip/browse' target='_blank'>here</a>.";
+              $hint_text = "SK Host works with most of your <b>favorite extensions</b>. Expand your panel's functionality by stocking up on some new extensions <a href='https://blueprint.zip/browse' target='_blank'>here</a>.";
             } else if($hint == 3) {
               $hint_icon = "bi-chat-left-quote-fill";
-              $hint_text = "<b>Suggest new features</b>, report bugs and provide feedback to help SKA Host improve even further on our <a href='https://github.com/skahost/Special-/issues/new' target='_blank'>GitHub repository</a>.";
+              $hint_text = "<b>Suggest new features</b>, report bugs and provide feedback to help SK Host improve even further on our <a href='https://github.com/skahost/Special-/issues/new' target='_blank'>GitHub repository</a>.";
             } else if($hint == 4) {
               $hint_icon = "bi-palette2";
-              $hint_text = "<b>Customize your color palette</b> and set your panel apart from others. Preview your colors live in SKA Host's <a href='/extensions/nebula/editor/edit/palette.php' target='_blank'>palette editor</a>.";
+              $hint_text = "<b>Customize your color palette</b> and set your panel apart from others. Preview your colors live in SK Host's <a href='/extensions/nebula/editor/edit/palette.php' target='_blank'>palette editor</a>.";
             } else if($hint == 5) {
               $hint_icon = "bi-plus-square-fill";
               $hint_text = "<b>Effortlessly customize your settings</b> by clicking the <b>plus button</b> next to the configuration options for a complete personalization experience.";
@@ -72,7 +72,7 @@
   </body>
 </html>
 <style>
-  @import url("https://cdn.nebula.style/icons/bootstrap/bootstrap-icons.css");
+  @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
   @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
   body { font-family: 'Inter', sans-serif; padding: 0px !important; margin: 0px !important; overflow: hidden; }
 

@@ -1,4 +1,4 @@
-/* © SKA Host */
+/* © SK Host */
 console.log("nebula#~ customContextMenu.js")
 
 async function showContextMenu(event, url, type) {

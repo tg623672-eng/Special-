@@ -1,4 +1,4 @@
-/* © SKA Host */
+/* © SK Host */
 console.log("nebula#~ keybindsModal.js")
 
 // Set to false to show the modal every reload

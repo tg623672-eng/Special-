@@ -1,4 +1,4 @@
-/* © SKA Host */
+/* © SK Host */
 console.log('nebula#~ fetchStyle.js');
 
 // this will work in IE 10, 11 and Safari/Chrome/Firefox/Edge

@@ -1,4 +1,4 @@
-/* © SKA Host */
+/* © SK Host */
 console.log("nebula#~ keybinds.js")
 
 function doc_keyDown(e) {
@@ -78,7 +78,7 @@ function doc_keyDown(e) {
   if((e.altKey && e.keyCode === 69) && rootAdmin){
     e.preventDefault();forceHideKeybinds();document.querySelector("a[href*='/admin/servers/view/']").click()
   }
-  // Open SKA Host Designer
+  // Open SK Host Designer
   if((e.ctrlKey && e.keyCode === 68) && rootAdmin){
     e.preventDefault();
     forceHideKeybinds();

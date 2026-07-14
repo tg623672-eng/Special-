@@ -5,6 +5,6 @@
     </svg>
   </div>
   <div class="initialize-notif-text">
-    <p><b>SKA Host has not been set up yet!</b> Login to enable (and configure) SKA Host on your Pterodactyl panel.</p>
+    <p><b>SK Host has not been set up yet!</b> Login to enable (and configure) SK Host on your Pterodactyl panel.</p>
   </div>
 </div>

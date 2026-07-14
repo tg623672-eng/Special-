@@ -1,5 +1,5 @@
 #!/bin/bash
-# SKA Host
+# SK Host
 
 cd "$PTERODACTYL_DIRECTORY" || return
 
@@ -79,14 +79,14 @@ MINIFY "."
 
 mv .precompress precompress
 touch precompress/README
-echo "Uncompressed versions of SKA Host assets for development purposes." > precompress/README
+echo "Uncompressed versions of SK Host assets for development purposes." > precompress/README
 
 # shellcheck disable=SC2193
 if [[ "$EXTENSION_VERSION" == *"-beta" ]]; then
-  echo -e "\x1b[34;1mApplying SKA Host Insiders patches.\x1b[0m"
+  echo -e "\x1b[34;1mApplying SK Host Insiders patches.\x1b[0m"
   sed -i \
     -e 's/icon: "nebula.jpg"/icon: "nebula-insiders.jpg"/g' \
-    -e 's/name: "SKA Host"/name: "SKA Host Insiders"/g' \
+    -e 's/name: "SK Host"/name: "SK Host Insiders"/g' \
     ./conf.yml
 fi
 

@@ -37,7 +37,7 @@
 
   document.addEventListener("DOMContentLoaded", function () {
     console.log(
-      "\n%cPowered by SKA Host\n%c\n\n",
+      "\n%cPowered by SK Host\n%c\n\n",
 
       'font-weight: 900; font-size: 24px; color: #7a98ff;',
       'font-weight: 900; color: #ffffff;'

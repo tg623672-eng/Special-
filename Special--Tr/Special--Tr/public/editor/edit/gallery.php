@@ -21,10 +21,10 @@
   <!-- tippy.js --> <script src="https://unpkg.com/tippy.js@6"></script>
   <!-- tippy.js --> <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/shift-away.css">
   <style>.match-dashboard-bg {background-color: <?php echo $blueprint->dbGet("nebula", "palette_dashboard_7"); ?> !important;} .match-auth-bg {background-color: <?php echo $blueprint->dbGet("nebula", "palette_auth_1"); ?> !important;}</style>
-  <title>SKA Host Designer</title>
+  <title>SK Host Designer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="/extensions/nebula/editor/assets/favicon.ico">
-  <?php /* SKA Host: analytics removed */ ?>
+  <?php /* SK Host: analytics removed */ ?>
 </head>
 
 <html style="background-color: #050404">
