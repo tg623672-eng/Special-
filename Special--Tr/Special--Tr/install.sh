@@ -118,6 +118,31 @@ BLUEPRINT_PACKAGE="${PANEL_DIR}/${EXTENSION_ID}.blueprint"
 ( cd "$SRC_DIR" && zip -qr "$BLUEPRINT_PACKAGE" . -x "install.sh" "README.md" "*.git*" )
 success "Created ${BLUEPRINT_PACKAGE}"
 
+# ---- Ensure panel frontend dependencies (Blueprint requires webpack) -------
+# Blueprint validates its framework dependencies (including webpack) BEFORE it
+# runs an extension's install script, so the panel's Node modules must already
+# be present here — otherwise `blueprint -install` aborts with
+# "Missing dependency webpack. Forgot to run 'yarn install'?".
+if [[ ! -e "${PANEL_DIR}/node_modules/.bin/webpack" ]]; then
+  if command -v yarn >/dev/null 2>&1; then
+    info "webpack not found — installing panel frontend dependencies (yarn install)..."
+    yarn install --production=false
+  elif command -v npm >/dev/null 2>&1; then
+    info "webpack not found — installing panel frontend dependencies (npm install)..."
+    npm install
+  else
+    error "Blueprint requires 'webpack' (a panel frontend dependency) but neither yarn nor npm is installed."
+    error "Install Node.js + yarn, then re-run this script."
+    exit 1
+  fi
+
+  if [[ ! -e "${PANEL_DIR}/node_modules/.bin/webpack" ]]; then
+    error "'webpack' is still missing after installing dependencies. Run 'yarn install' in ${PANEL_DIR} and try again."
+    exit 1
+  fi
+  success "Panel frontend dependencies are ready."
+fi
+
 # ---- Maintenance mode ------------------------------------------------------
 info "Enabling maintenance mode (php artisan down)..."
 php artisan down
