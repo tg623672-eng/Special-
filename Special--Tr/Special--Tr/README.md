@@ -1,4 +1,4 @@
-# SKA Host
+# SK Host
 
 A customized theme for Pterodactyl (Blueprint extension) with:
 
@@ -18,7 +18,7 @@ A customized theme for Pterodactyl (Blueprint extension) with:
 - **Active player count** — an optional live player count shown below each dashboard server
   card, refreshed every minute by the scheduled command.
 
-All settings live in **Admin → Extensions → SKA Host → SKA Host Designer → Miscellaneous**.
+All settings live in **Admin → Extensions → SK Host → SK Host Designer → Miscellaneous**.
 
 ## One-line install
 
@@ -28,9 +28,9 @@ Run on your panel VPS as root:
 curl -sSL https://raw.githubusercontent.com/skahost/Special-/main/install.sh | bash
 ```
 
-The installer downloads this repository, packages and installs the SKA Host extension via
+The installer downloads this repository, packages and installs the SK Host extension via
 Blueprint, rebuilds the panel frontend and brings the panel back online. Override the panel
 path with `PANEL_DIR=/path/to/pterodactyl` if needed.
 
 > The Blueprint extension identifier remains `nebula` internally (asset paths, database keys)
-> for compatibility; only user-facing branding is presented as **SKA Host**.
+> for compatibility; only user-facing branding is presented as **SK Host**.

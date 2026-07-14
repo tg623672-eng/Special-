@@ -119,7 +119,7 @@ class nebulaExtensionController extends Controller
     $sidebar_hover = $this->blueprint->dbGet('nebula', 'sidebar_hover');
     $animations = $this->blueprint->dbGet('nebula', 'animations');
     $sidebar_separators = $this->blueprint->dbGet('nebula', 'sidebar_separators');
-    // SKA Host custom additions (idle shutdown, module toggles & extra UI options)
+    // SK Host custom additions (idle shutdown, module toggles & extra UI options)
     $enable_idle_shutdown = $this->blueprint->dbGet('nebula', 'enable_idle_shutdown');
     $idle_timeout_minutes = $this->blueprint->dbGet('nebula', 'idle_timeout_minutes');
     $exempt_eggs = $this->blueprint->dbGet('nebula', 'exempt_eggs');
@@ -244,7 +244,7 @@ class nebulaExtensionController extends Controller
     $defaultSidebar_hover = "popout";
     $defaultAnimations = "fadeup";
     $defaultSidebar_separators = "1";
-    // SKA Host custom additions
+    // SK Host custom additions
     $defaultEnable_idle_shutdown = "0";
     $defaultIdle_timeout_minutes = "10";
     $defaultExempt_eggs = "";
@@ -364,7 +364,7 @@ class nebulaExtensionController extends Controller
     if($sidebar_hover == "" || $reset == "1") {$this->blueprint->dbSet('nebula', 'sidebar_hover', $defaultSidebar_hover);$sidebar_hover = $this->blueprint->dbGet('nebula', 'sidebar_hover');}
     if($animations == "" || $reset == "1") {$this->blueprint->dbSet('nebula', 'animations', $defaultAnimations);$animations = $this->blueprint->dbGet('nebula', 'animations');}
     if($sidebar_separators == "" || $reset == "1") {$this->blueprint->dbSet('nebula', 'sidebar_separators', $defaultSidebar_separators);$sidebar_separators = $this->blueprint->dbGet('nebula', 'sidebar_separators');}
-    // SKA Host custom additions
+    // SK Host custom additions
     if($enable_idle_shutdown == "" || $reset == "1") {$this->blueprint->dbSet('nebula', 'enable_idle_shutdown', $defaultEnable_idle_shutdown);$enable_idle_shutdown = $this->blueprint->dbGet('nebula', 'enable_idle_shutdown');}
     if($idle_timeout_minutes == "" || $reset == "1") {$this->blueprint->dbSet('nebula', 'idle_timeout_minutes', $defaultIdle_timeout_minutes);$idle_timeout_minutes = $this->blueprint->dbGet('nebula', 'idle_timeout_minutes');}
     if($exempt_eggs == "" || $reset == "1") {$this->blueprint->dbSet('nebula', 'exempt_eggs', $defaultExempt_eggs);$exempt_eggs = $this->blueprint->dbGet('nebula', 'exempt_eggs');}

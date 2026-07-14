@@ -2,7 +2,7 @@
   <head>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap&version=1460');
-      @import url("https://cdn.nebula.style/icons/bootstrap/bootstrap-icons.css");
+      @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
     </style>
     <script src="{webroot/public}/libraries/errorHandler.js"></script>
   </head>
@@ -11,10 +11,10 @@
     <script>
       HandleNebulaError(`
         <code>${window.location.hostname}</code>
-        utilizes SKA Host to bring users an optimal experience.
+        utilizes SK Host to bring users an optimal experience.
         This page contains information that might be useful for
         debugging certain problems administrators might encounter
-        with modifications such as SKA Host.
+        with modifications such as SK Host.
 
         <div style="
           background-color: #241e2f;

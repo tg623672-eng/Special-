@@ -53,7 +53,7 @@
     '); }
 
     if($blueprint->dbGet("nebula", "watermark_auth") != "0") {
-      echo ('<div class="nebula-watermark"><b class="watermark-highlight"><i class="bi bi-exclude"></i> SKA Host</b></div>');
+      echo ('<div class="nebula-watermark"><b class="watermark-highlight"><i class="bi bi-exclude"></i> SK Host</b></div>');
     }
     ?>
   </body>

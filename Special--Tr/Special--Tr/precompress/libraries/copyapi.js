@@ -1,4 +1,4 @@
-/* © SKA Host */
+/* © SK Host */
 console.log("nebula#~ copyapi.js")
 
 function copy(a) {

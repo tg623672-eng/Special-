@@ -1,4 +1,4 @@
-/* © SKA Host */
+/* © SK Host */
 console.log('skhost#~ errorHandler.js');
 
 function HandleNebulaError(error, reference) {
@@ -25,7 +25,7 @@ function HandleNebulaError(error, reference) {
         font-family: 'Inter', sans-serif;
         overflow-y: scroll;
       ">
-        <p style="font-size: 22px; font-weight: 600; padding-bottom: 12px; margin: 0">SKA Host</p>
+        <p style="font-size: 22px; font-weight: 600; padding-bottom: 12px; margin: 0">SK Host</p>
         <p style="max-width: 750px">
           ${error}
         </p>
@@ -42,7 +42,7 @@ function HandleNebulaError(error, reference) {
         <p style="margin: 0px">
           <a href="https://github.com/skahost/Special-/issues/new" style="color: #7997ff">Feedback</a>
           <i class="bi bi-dot"></i>
-          <span style="color: #7997ff">SKA Host</span>
+          <span style="color: #7997ff">SK Host</span>
         </p>
       </div>
 
@@ -78,7 +78,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     HandleNebulaError(
       `
-      SKA Host was unable to initialize because it couldn't access the
+      SK Host was unable to initialize because it couldn't access the
       <code>app</code>
       node.
       This usually indicates a failed webpack build and is usually
@@ -92,7 +92,7 @@ window.addEventListener('DOMContentLoaded', () => {
       <br/><br/>
 
       Please note that this error is commonly
-      <b>not caused by SKA Host</b>
+      <b>not caused by SK Host</b>
       due to the theme being a shell around Pterodactyl and doesn't
       modify any part of it's bundle, hence why we're able to show
       this error to you.

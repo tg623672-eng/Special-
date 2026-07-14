@@ -1,4 +1,4 @@
-/* SKA Host custom addition: Idle Server Shutdown (Auto-Sleep) & player counts — frontend */
+/* SK Host custom addition: Idle Server Shutdown (Auto-Sleep) & player counts — frontend */
 console.log("skhost#~ idleShutdown.js")
 
 function nebulaIdleConfig() {

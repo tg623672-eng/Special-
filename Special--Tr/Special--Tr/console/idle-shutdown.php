@@ -1,7 +1,7 @@
 <?php
 
 /**
- * SKA Host — Idle Server Shutdown (Auto-Sleep)
+ * SK Host — Idle Server Shutdown (Auto-Sleep)
  *
  * This file is executed every minute by the Blueprint-generated Artisan command
  * `nebula:idle-shutdown` (see console/Console.yml). Inside this scope the
@@ -10,7 +10,7 @@
  *   - $this      : the Illuminate\Console\Command instance (info()/line()/error())
  *
  * Behaviour:
- *   1. Skip entirely unless `enable_idle_shutdown` is turned on in SKA Host Designer.
+ *   1. Skip entirely unless `enable_idle_shutdown` is turned on in SK Host Designer.
  *   2. Look at every active (non-suspended, installed) server that is currently
  *      running on Wings.
  *   3. Skip servers owned by admins (when `exempt_admin_servers` is enabled) and

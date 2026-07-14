@@ -148,10 +148,10 @@
     .nebula-module-grid .nebula-toggle-row { display:flex; align-items:center; justify-content:space-between; padding:6px 0; }
     .nebula-module-grid .nebula-toggle-row span { font-size:13px; color:#c9c9d6; }
   </style>
-  <title>SKA Host Designer</title>
+  <title>SK Host Designer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="/extensions/nebula/editor/assets/favicon.ico">
-  <?php /* SKA Host: analytics removed */ ?>
+  <?php /* SK Host: analytics removed */ ?>
 </head>
 
 <html style="background-color: #050404">
@@ -364,7 +364,7 @@
             <!-- Configuration Import/Export -->
             <div class="option">
               <p class="option-title">Import/Export settings</p>
-              <p class="option-footer">Here you can export your SKA Host configuration to a ".skaconfig" file.</p>
+              <p class="option-footer">Here you can export your SK Host configuration to a ".skaconfig" file.</p>
               <button class="notif-button notif-primary" type="button" onclick="document.getElementById('importConfigFile').click()" type="button">Import configuration</button>
               <input type="file" id="importConfigFile" style="display: none;" accept=".skaconfig,.nebulaconfig" onchange="importConfig(event)">
               <button class="notif-button" type="button" onclick="downloadConfig()" type="button">Export configuration</button>
@@ -404,7 +404,7 @@
         <div class="notif-container">
           <h2 class="notif-title">
             <i class="bi bi-trash3-fill" style="margin-right: 4px;"></i>
-            Reset SKA Host
+            Reset SK Host
           </h2>
           <p class="notif-text">Restore all of your changes to factory settings, this cannot be undone.</p>
           <button class="notif-button notif-danger" id="reset-confirm" onclick="factoryReset()" type="button">Reset</button>
@@ -418,7 +418,7 @@
             <i class="bi bi-check-circle-fill" style="margin-right: 4px;"></i>
             Reset complete
           </h2>
-          <p class="notif-text">Successfully restored SKA Host's configuration to factory defaults.</p>
+          <p class="notif-text">Successfully restored SK Host's configuration to factory defaults.</p>
           <button class="button-close notif-button" type="button">Dismiss</button>
         </div>
       </div>

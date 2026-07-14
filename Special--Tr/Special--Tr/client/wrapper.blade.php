@@ -254,7 +254,7 @@
 
 @if(Auth::check())
 @if($n_watermark == "1")
-<p class="nebulaFooter"><i style="font-size:12px; margin-right: 3px;" class="bi bi-exclude"></i> SKA Host</p>
+<p class="nebulaFooter"><i style="font-size:12px; margin-right: 3px;" class="bi bi-exclude"></i> SK Host</p>
 @endif
 <div
   <?php
@@ -1079,7 +1079,7 @@
   ></div>
   <div class="nebula-auth-backdrop"></div>
   @if($n_watermark_auth != "0")
-    <div class="nebula-watermark"><b class="watermark-highlight"><i class="bi bi-exclude"></i> SKA Host</b></div>
+    <div class="nebula-watermark"><b class="watermark-highlight"><i class="bi bi-exclude"></i> SK Host</b></div>
   @endif
   <style>.g-recaptcha {display: none !important;}</style>
   @if($blueprint->dbGet("settings", "recaptcha:enabled") == "true")

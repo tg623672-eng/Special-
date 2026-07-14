@@ -17,7 +17,7 @@
   @if($n_alert == "1")<script src="/extensions/nebula/libraries/assets/marked.min.js?{timestamp}"></script>@endif
   <script src="/extensions/nebula/libraries/assets/popper.min.js?{timestamp}"></script>
   <script src="/extensions/nebula/libraries/assets/tippy-bundle.umd.min.js?{timestamp}"></script>
-  <!-- SKA Host custom additions: shared client config -->
+  <!-- SK Host custom additions: shared client config -->
   <?php
     $__nebula_sleeping = json_decode($n_idle_sleeping ?? '', true);
     if(!is_array($__nebula_sleeping)) { $__nebula_sleeping = []; }
@@ -75,7 +75,7 @@
 <script src="/extensions/nebula/libraries/errorHandler.js?{timestamp}"></script>
 <script src="/extensions/nebula/libraries/locationchange.js?{timestamp}"></script>
 <?php
-  // SKA Host: third-party analytics phone-home removed.
+  // SK Host: third-party analytics phone-home removed.
 ?>
 
 <!-- Import stylesheets. -->
@@ -143,11 +143,11 @@
   <?php
     /* Icon theme imports
     *
-    * SKA Host fetches icon-theme webfonts from a CDN. These are third-party
+    * SK Host fetches icon-theme webfonts from a CDN. These are third-party
     * icon packs (Bootstrap Icons, Lucide, etc.) served as static font assets.
     */
   ?>
-  @import url("https://cdn.nebula.style/icons/bootstrap/bootstrap-icons.css");
+  @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
   @if($n_icon_fallback == "feather")                 @import url("https://cdn.nebula.style/icons/feather/feather-icons.css"); @endif
   @if($n_icon_fallback == "lucide")                  @import url("https://cdn.nebula.style/icons/lucide/lucide.css"); @endif
   @if($n_icon_fallback == "material")                @import url("https://cdn.nebula.style/icons/materialdesign/default/materialdesignicons.css"); @endif

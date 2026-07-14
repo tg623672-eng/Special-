@@ -1,4 +1,4 @@
-/* © SKA Host */
+/* © SK Host */
 console.log("nebula#~ floatingWindows.js")
 
 let MultitaskingMoveHints = [

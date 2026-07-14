@@ -1,4 +1,4 @@
-/* © SKA Host */
+/* © SK Host */
 
 [class*="magic-pattern"][view="auth"] { --s: var(--patternSizeAuth); }
 [class*="magic-pattern"][view="dashboard"] { --s: var(--patternSizeDashboard); }

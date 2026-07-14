@@ -1,4 +1,4 @@
-/* SKA Host custom addition: modules, footer removal, kill button & sidebar tweaks */
+/* SK Host custom addition: modules, footer removal, kill button & sidebar tweaks */
 console.log("skahost#~ nebulaModules.js")
 
 var NEBULA_MODULES = [
@@ -263,7 +263,10 @@ function nebulaRenderFilesModule(module, content) {
         list.innerHTML = rows
       })
       .catch(function (e) {
-        nebulaModuleError(list, (e && e.message ? e.message : "Could not list files.") + " Ensure the directory exists on this server.")
+        // The target directory may not exist yet (e.g. a fresh server with no
+        // /plugins folder). Rather than surfacing an alarming error, show a
+        // friendly empty state — uploading the first file creates the folder.
+        nebulaModuleInfo(list, "This directory doesn't exist yet. Upload a file to create it.")
       })
   }
 
@@ -582,9 +585,57 @@ function nebulaApplyEggImages() {
   })
 }
 
+/* ---- 7. Per-card info line: active players + auto-suspend countdown ---- */
+function nebulaApplyServerCardInfo() {
+  if (typeof nebulaCurrentPage === "function" && nebulaCurrentPage() !== "home") return
+  var playersCfg = (window.NebulaConfig && window.NebulaConfig.players) || { enabled: false, counts: {} }
+  var suspendCfg = nebulaAutoSuspendConfig()
+  if (!playersCfg.enabled && !suspendCfg.enabled) return
+  var counts = playersCfg.counts || {}
+  var expiry = suspendCfg.expiry || {}
+
+  document.querySelectorAll('a[href^="/server/"]').forEach(function (card) {
+    var match = card.getAttribute("href").match(/\/server\/([^/]+)/)
+    if (!match) return
+    var id = match[1]
+
+    var hasPlayers = playersCfg.enabled && Object.prototype.hasOwnProperty.call(counts, id)
+    var hasExpiry = suspendCfg.enabled && Object.prototype.hasOwnProperty.call(expiry, id)
+    if (!hasPlayers && !hasExpiry) {
+      var stale = card.querySelector(".nebula-card-info")
+      if (stale) stale.remove()
+      return
+    }
+
+    var info = card.querySelector(".nebula-card-info")
+    if (!info) {
+      info = document.createElement("div")
+      info.className = "nebula-card-info"
+      card.appendChild(info)
+    }
+
+    var parts = []
+    if (hasPlayers) {
+      var n = counts[id]
+      parts.push('<span class="nebula-card-players"><i class="bi bi-people-fill"></i> ' + nebulaEscape(n) + (Number(n) === 1 ? " player" : " players") + "</span>")
+    }
+    if (hasExpiry) {
+      var ts = Date.parse(expiry[id])
+      var remaining = ts - Date.now()
+      var expired = !isNaN(ts) && remaining <= 0
+      var soon = !isNaN(ts) && remaining > 0 && remaining < 86400000
+      var label = isNaN(ts) ? "\u2014" : nebulaFormatCountdown(remaining)
+      var cls = "nebula-card-countdown" + (expired ? " nebula-card-expired" : soon ? " nebula-card-soon" : "")
+      parts.push('<span class="' + cls + '"><i class="bi bi-hourglass-split"></i> ' + nebulaEscape(label) + "</span>")
+    }
+    info.innerHTML = parts.join("")
+  })
+}
+
 function nebulaModulesRefresh() {
   try { nebulaApplyCardBackground() } catch (e) {}
   try { nebulaApplyEggImages() } catch (e) {}
+  try { nebulaApplyServerCardInfo() } catch (e) {}
   try { nebulaRemoveFooter() } catch (e) {}
   try { nebulaAddKillButton() } catch (e) {}
   try { nebulaHideExtensionThreeDot() } catch (e) {}

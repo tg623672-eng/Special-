@@ -1,1 +1,1 @@
-<?php /* SKA Host: third-party analytics phone-home removed. */ ?>
+<?php /* SK Host: third-party analytics phone-home removed. */ ?>

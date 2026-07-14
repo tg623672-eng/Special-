@@ -1,7 +1,7 @@
 Hi.
 
-SKA Host is a customized Pterodactyl theme maintained for SKA Host.
+SK Host is a customized Pterodactyl theme maintained for SK Host.
 
 Please only use this software in accordance with its license and terms.
 
-- SKA Host
+- SK Host

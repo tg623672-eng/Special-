@@ -1,16 +1,16 @@
-# Developing with SKA Host
+# Developing with SK Host
 
-SKA Host is a customized theme for Pterodactyl, built as a Blueprint extension.
+SK Host is a customized theme for Pterodactyl, built as a Blueprint extension.
 This document helps you modify the theme to your liking.
 
 ## Blueprint development tools
 
-SKA Host uses Blueprint's developer tools.
+SK Host uses Blueprint's developer tools.
 
 Unarchive the extension folder into your `.blueprint/dev` directory, then use the
 `blueprint -build` command every time you'd like to save a change.
 
-> **SKA Host does not play well with `blueprint -watch`, you may run into issues!!**
+> **SK Host does not play well with `blueprint -watch`, you may run into issues!!**
 
 [Learn more about developing Blueprint extensions on the Blueprint website](https://blueprint.zip/guides/dev/quickstart)
 
@@ -23,20 +23,20 @@ so you don't lose your changes. You can do so using the `blueprint -export` comm
 
 ## Prepare your development environment
 
-SKA Host uses some additional node modules to make exporting easier, and to
+SK Host uses some additional node modules to make exporting easier, and to
 automatically minify files.
 
 ```bash
 # Navigate to your Pterodactyl directory.
 cd /var/www/pterodactyl
 
-# Install SKA Host's development environment dependencies.
+# Install SK Host's development environment dependencies.
 yarn add less @node-minify/uglify-js @node-minify/clean-css @node-minify/html-minifier @node-minify/cli
 ```
 
 ### Unminified files
 
-SKA Host uses minified js/css/html files in production. The unminified versions are
+SK Host uses minified js/css/html files in production. The unminified versions are
 bundled with the theme under `precompress/`.
 
 For development purposes, you may want to work with the unminified versions only.
